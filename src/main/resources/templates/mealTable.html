@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="mealTable(weeks)">
+  <table>
+    <thead>
+    <tr>
+      <th>
+        <div class="day-week"></div>
+      </th>
+      <th>월</th>
+      <th>화</th>
+      <th>수</th>
+      <th>목</th>
+      <th>금</th>
+    </tr>
+    </thead>
+    <tbody>
+      <th:block th:each="week : ${weeks}">
+      <tr class="week-wrapper">
+        <td>
+          <div class="week">날짜</div>
+        </td>
+        <td th:each="day : ${week.days}" th:text="${day.date != null ? day.date.dayOfMonth : ''}"></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="main-menu">식단</div>
+        </td>
+        <td th:each="day : ${week.days}" th:text="${day.meal}"></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="kcal-protein">kcal/단백질 (g)</div>
+        </td>
+        <td th:each="day : ${week.days}" th:text="${day.kcalProtein}"></td>
+      </tr>
+      <tr>
+        <td>
+          <div class="snack">간식</div>
+        </td>
+        <td th:each="day : ${week.days}" th:text="${day.snack}"></td>
+      </tr>
+      </th:block>
+    </tbody>
+  </table>
+</th:block>
+</html>
