@@ -1,0 +1,76 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 40px;
+  background-color: #f9f9f9;
+}
+
+.main-wrapper h1 {
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+
+.start-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #10B981;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.start-btn:hover {
+  background-color: #0f9b73;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333;
+}
+
+table thead tr {
+    border: 1px solid transparent;
+}
+
+td {
+    border: 1px solid #333;
+}
+
+table tbody tr.week-wrapper {
+    background-color: #3ED4BE;
+    color: #fff;
+}
+
+
+table .day-week {
+    min-height: 40px;
+}
+
+table tr div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table .main-menu {
+    min-height: 200px;
+}
+
+table .kcal-protein {
+    min-height: 60px;
+}
+
+table .snack {
+    min-height: 60px;
+}
+
+table tr td:nth-child(1) {
+    width: 300px;
+}

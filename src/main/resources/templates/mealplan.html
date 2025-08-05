@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>식단표</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<h1>이달의 식단표</h1>
+
+<div class="container">
+    <div th:replace="mealTable :: mealTable(${weeks})"></div>
+</div>
+
+</body>
+</html>
