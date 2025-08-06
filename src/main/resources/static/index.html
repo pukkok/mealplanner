@@ -18,16 +18,16 @@
         <!-- form 태그 시작 -->
         <form class="form-elements" method="post" action="/signup" id="auth-form">
             <div class="form-element">
-                <input type="text" name="username" placeholder="아이디" required>
+                <input type="text" name="username" placeholder="아이디" required autocomplete="off">
             </div>
             <div class="form-element hide">
-                <input type="text" name="username" placeholder="이름" required autoComplete="user-name">
+                <input type="text" name="name" placeholder="이름" required autocomplete="off">
             </div>
             <div class="form-element">
-                <input type="password" name="password" placeholder="비밀번호" required autoComplete="new-password">
+                <input type="password" name="password" placeholder="비밀번호" required autocomplete="new-password">
             </div>
             <div class="form-element hide">
-                <input type="password" name="confirmPassword" placeholder="비밀번호 확인" autoComplete="new-password">
+                <input type="password" name="confirmPassword" placeholder="비밀번호 확인" autocomplete="new-password">
             </div>
             <div class="form-element">
                 <button type="submit" id="submit-btn">회원가입</button>
