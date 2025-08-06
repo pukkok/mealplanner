@@ -2,15 +2,39 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>식단표 시작</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>식단표 만들기</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<div class="main-wrapper">
-    <h1>식단표 웹</h1>
-    <a href="/mealplan">
-        <button class="start-btn">식단표 보러가기</button>
-    </a>
-</div>
+    <h1>식단표 만들기</h1>
+
+    <div class="form signup">
+        <div class="form-header">
+            <div class="show-signup">Sign Up</div>
+            <div class="show-signin">Sign In</div>
+        </div>
+        <div class="arrow"></div>
+
+        <!-- form 태그 시작 -->
+        <form class="form-elements" method="post" action="/signup" id="auth-form">
+            <div class="form-element">
+                <input type="text" name="username" placeholder="아이디" required>
+            </div>
+            <div class="form-element hide">
+                <input type="text" name="username" placeholder="이름" required autoComplete="user-name">
+            </div>
+            <div class="form-element">
+                <input type="password" name="password" placeholder="비밀번호" required autoComplete="new-password">
+            </div>
+            <div class="form-element hide">
+                <input type="password" name="confirmPassword" placeholder="비밀번호 확인" autoComplete="new-password">
+            </div>
+            <div class="form-element">
+                <button type="submit" id="submit-btn">회원가입</button>
+            </div>
+        </form>
+    </div>
+
+<script src="./script/index.js"></script>
 </body>
 </html>
