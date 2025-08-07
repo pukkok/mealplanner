@@ -26,19 +26,19 @@
         <td>
           <div class="main-menu">식단</div>
         </td>
-        <td th:each="day : ${week.days}" th:text="${day.meal}"></td>
+        <td class="cell menu-cell" th:each="day : ${week.days}" th:text="${day.meal}" th:data-date="${day.date}"></td>
       </tr>
       <tr>
         <td>
           <div class="kcal-protein">kcal/단백질 (g)</div>
         </td>
-        <td th:each="day : ${week.days}" th:text="${day.kcalProtein}"></td>
+        <td class="cell kcal-cell" th:each="day : ${week.days}" th:text="${day.kcalProtein}" th:data-date="${day.date}"></td>
       </tr>
       <tr>
         <td>
           <div class="snack">간식</div>
         </td>
-        <td th:each="day : ${week.days}" th:text="${day.snack}"></td>
+        <td class="cell snack-cell" th:each="day : ${week.days}" th:text="${day.snack}" th:data-date="${day.date}"></td>
       </tr>
       </th:block>
     </tbody>

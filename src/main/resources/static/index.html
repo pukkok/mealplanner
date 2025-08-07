@@ -2,15 +2,40 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>식단표 시작</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <title>식단표 만들기</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<div class="main-wrapper">
-    <h1>식단표 웹</h1>
-    <a href="/mealplan">
-        <button class="start-btn">식단표 보러가기</button>
-    </a>
-</div>
+    <main>
+        <h1>식단표 만들기</h1>
+
+        <div class="form-wrapper signin">
+            <div class="form-header">
+                <button class="show-signup">Sign Up</button>
+                <button class="show-signin">Sign In</button>
+            </div>
+            <div class="arrow"></div>
+
+            <form class="form-elements" method="post" action="/login" id="auth-form">
+                <div class="form-element">
+                    <input type="text" name="username" placeholder="아이디" required autocomplete="off">
+                </div>
+                <div class="form-element hide">
+                    <input type="text" tabindex="-1" name="name" placeholder="이름" autocomplete="off">
+                </div>
+                <div class="form-element">
+                    <input type="password" name="password" placeholder="비밀번호" required autocomplete="off">
+                </div>
+                <div class="form-element hide">
+                    <input type="password" tabindex="-1" name="confirmPassword" placeholder="비밀번호 확인" autocomplete="off">
+                </div>
+                <div class="form-element">
+                    <button type="submit" id="submit-btn">로그인</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+<script type="module" src="./script/index.js"></script>
 </body>
 </html>
