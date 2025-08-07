@@ -6,35 +6,36 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>식단표 만들기</h1>
+    <main>
+        <h1>식단표 만들기</h1>
 
-    <div class="form signup">
-        <div class="form-header">
-            <div class="show-signup">Sign Up</div>
-            <div class="show-signin">Sign In</div>
+        <div class="form-wrapper signin">
+            <div class="form-header">
+                <button class="show-signup">Sign Up</button>
+                <button class="show-signin">Sign In</button>
+            </div>
+            <div class="arrow"></div>
+
+            <form class="form-elements" method="post" action="/login" id="auth-form">
+                <div class="form-element">
+                    <input type="text" name="username" placeholder="아이디" required autocomplete="off">
+                </div>
+                <div class="form-element hide">
+                    <input type="text" tabindex="-1" name="name" placeholder="이름" autocomplete="off">
+                </div>
+                <div class="form-element">
+                    <input type="password" name="password" placeholder="비밀번호" required autocomplete="off">
+                </div>
+                <div class="form-element hide">
+                    <input type="password" tabindex="-1" name="confirmPassword" placeholder="비밀번호 확인" autocomplete="off">
+                </div>
+                <div class="form-element">
+                    <button type="submit" id="submit-btn">로그인</button>
+                </div>
+            </form>
         </div>
-        <div class="arrow"></div>
+    </main>
 
-        <!-- form 태그 시작 -->
-        <form class="form-elements" method="post" action="/signup" id="auth-form">
-            <div class="form-element">
-                <input type="text" name="username" placeholder="아이디" required autocomplete="off">
-            </div>
-            <div class="form-element hide">
-                <input type="text" name="name" placeholder="이름" required autocomplete="off">
-            </div>
-            <div class="form-element">
-                <input type="password" name="password" placeholder="비밀번호" required autocomplete="new-password">
-            </div>
-            <div class="form-element hide">
-                <input type="password" name="confirmPassword" placeholder="비밀번호 확인" autocomplete="new-password">
-            </div>
-            <div class="form-element">
-                <button type="submit" id="submit-btn">회원가입</button>
-            </div>
-        </form>
-    </div>
-
-<script src="./script/index.js"></script>
+<script type="module" src="./script/index.js"></script>
 </body>
 </html>
