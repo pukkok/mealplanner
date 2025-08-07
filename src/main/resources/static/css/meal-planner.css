@@ -1,0 +1,45 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #333;
+}
+
+table thead tr {
+    border: 1px solid transparent;
+}
+
+td {
+    border: 1px solid #333;
+}
+
+table tbody tr.week-wrapper {
+    background-color: var(--brand-color);
+    color: #fff;
+}
+
+
+table .day-week {
+    min-height: 40px;
+}
+
+table tr div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table .main-menu {
+    min-height: 200px;
+}
+
+table .kcal-protein {
+    min-height: 60px;
+}
+
+table .snack {
+    min-height: 60px;
+}
+
+table tr td:nth-child(1) {
+    width: 300px;
+}
